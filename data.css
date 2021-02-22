@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+.mood {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.unactiveFace {
+  display: none;
+  opacity: 0.3;
+}
+
+.activeFace {
+  display: block;
+}
+
+svg {
+  /* transform: translateX(-10px);
+    transform: translateY(-20px); */
+  transform: translate(-40px, -30px);
+  height: 80%;
+  width: 80%;
+}
+
+.okay:hover #leaf {
+  animation: leaf 4s infinite linear;
+  transform-origin: center;
+}
+
+.okay:hover #eyeLeft,
+.okay:hover #eyeRight {
+  animation: eyes 3s ease-in-out infinite;
+}
+
+@keyframes eyes {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
+
+@keyframes leaf {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mood.grow {
+  animation: grow 7s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1.00001);
+  }
+}
+
+h1 {
+  font-family: "Bangers", cursive;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 50%;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.moodHeading {
+  padding-top: 0px;
+  font-size: 22x;
+}
+
+.moodHeading.ghost {
+  opacity: 0.3;
+}
+
+.faceDepressed,
+.faceSad,
+.faceOkay,
+.faceGood,
+.faceGreat {
+  display: none;
+}
+
+nav {
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 40px;
+  width: 100%;
+  background-color: #373c3f;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav li {
+  margin-left: 40px;
+  color: white;
+}
+
+nav li a:link,
+nav li a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: red;
+}
+
+nav li ::after {
+  margin-left: 10px;
+  font-size: 18px;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b2d2f;
+  height: 1200px;
+}
+
+.container {
+  display: grid;
+  grid-row-gap: 60px;
+  grid-column-gap: 35px;
+  grid-template-rows: 300px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container .weekChart {
+  display: none;
+  display: hidden;
+}
+
+.container .lineChart {
+  display: block;
+}
+
+.container .mainGraphCon {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+
+.container .mainGraphCon .graphContainer {
+  background-color: #373c3f;
+  width: 800px;
+  border-radius: 10px;
+}
+
+.container .mainGraphCon .graphContainer .chartSVG {
+  height: 35px;
+  width: 35px;
+}
+
+.container .mainGraphCon .graphContainer .averageChartSVG {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  transform: translateY(25%);
+  transform: translateX(-145%);
+  transform: translate(-145%, 55%);
+}
+
+.container .mainGraphCon .graphContainer .depressedChartSVG {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  transform: translate(-145%, 670%);
+}
+
+.container .mainGraphCon .graphContainer .sadChartSVG {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  transform: translate(-145%, 520%);
+}
+
+.container .mainGraphCon .graphContainer .okayChartSVG {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  transform: translate(-145%, 360%);
+}
+
+.container .mainGraphCon .graphContainer .goodChartSVG {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  transform: translate(-145%, 210%);
+}
+
+.container .mainGraphCon .graphContainer .viewContainer {
+  margin-top: 0;
+  height: 40px;
+  justify-content: space-around;
+  display: flex;
+  background-color: #e1e1e1;
+}
+
+.container .mainGraphCon .graphContainer span {
+  margin-top: 0;
+  height: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: #e1e1e1;
+  align-items: center;
+}
+
+.container .mainGraphCon .graphContainer span.selected {
+  background-color: white;
+}
+
+.container .boxInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  height: 375px;
+  background-color: #373c3f;
+  border-radius: 10px;
+}
+
+.container .boxInfo h1 {
+  margin-top: 4px;
+}
+
+.container .pie {
+  margin-left: 20px;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.container .averageMood {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background-color: #e1e1e1;
+}
+
+.container .averageMood h1 {
+  color: #373c3f;
+}
+
+.container .averageMood .averageMoodSvg {
+  width: 70%;
+  height: 70%;
+}
+
+.container .moodCounters {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+.container .dataInfo {
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 320px;
+  height: 240px;
+}
+
+.container .dataInfo .countCons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #a0a1a1;
+}
+
+.container .dataInfo .countCons h4 {
+  font-size: 20px;
+}
+
+.container .dataInfo .countCons span {
+  font-size: 40px;
+}
+
+.container .dataInfo .totalLogsCon {
+  grid-row: 1/2;
+  grid-template-columns: 1/2;
+}
+
+.container .dataInfo .currentStreakCon {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.container .dataInfo .greatCon {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.container .dataInfo .highestCon {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+/*# sourceMappingURL=data.css.map */

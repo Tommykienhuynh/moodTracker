@@ -1,0 +1,147 @@
+nav {
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 40px;
+  width: 100%;
+  background-color: #373c3f;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav li {
+  margin-left: 40px;
+  color: white;
+}
+
+nav li a:link,
+nav li a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: red;
+}
+
+nav li ::after {
+  margin-left: 10px;
+  font-size: 18px;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  height: 100%;
+  width: 99vw;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* .allLogs {
+  width: 75vw;
+} */
+.container {
+  display: grid;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  grid-template-columns: 200px 1fr 1fr 1fr;
+  grid-template-rows: 140px 30px;
+  row-gap: 10px;
+  column-gap: 10px;
+  /* padding-left: 220px;
+  padding-right: 220px; */
+}
+
+.container .faceImage-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #373c3f;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container .faceImage-Container svg {
+  width: 60%;
+  margin-right: 10px;
+}
+
+.container .moodName-Container.Great {
+  color: #b0e62c;
+}
+
+.container .moodName-Container.Good {
+  color: #00e2f8;
+}
+
+.container .moodName-Container.Okay {
+  color: #ee8932;
+}
+
+.container .moodName-Container.Sad {
+  color: #6c63ff;
+}
+
+.container .moodName-Container.Depressed {
+  color: #e45da3;
+}
+
+.container .moodName-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #373c3f;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container .logs-Container {
+  background-color: #373c3f;
+  grid-row: 1/3;
+  grid-column: 2/5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 800px;
+}
+
+.container .logs-Container h3 {
+  margin-bottom: 2px;
+}
+
+.container .logs-Container span {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 100%;
+}
+
+.container .logs-Container h2 {
+  font-size: 100%;
+  margin-bottom: 0px;
+}
+
+.container .logs-Container p {
+  margin-top: 35px;
+  font-size: 100%;
+}
+/*# sourceMappingURL=history.css.map */

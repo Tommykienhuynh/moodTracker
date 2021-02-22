@@ -1,0 +1,41 @@
+nav {
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 40px;
+  width: 100%;
+  background-color: $background-light-dark;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav li {
+  margin-left: 40px;
+  color: white;
+
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+  }
+}
+
+nav li ::after {
+  margin-left: 10px;
+  font-size: 18px;
+  color: black;
+}

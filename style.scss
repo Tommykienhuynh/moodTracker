@@ -1,0 +1,277 @@
+@import "faces";
+@import "heading";
+@import "config";
+@import "hover";
+@import "nav";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  //background: linear-gradient(0.25turn, #2c3e50, #000000);
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2d2f;
+  margin: 0;
+  //background: url("img/rhendi-rukmana-H0lTOg1t_0o-unsplash.jpg") no-repeat
+  //center center/ cover;
+  background-repeat: no-repeat;
+  // height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* body.Depressed {
+  background: linear-gradient($depressed-dark, $depressed-light);
+}
+body.Great {
+  background: linear-gradient($great-dark, $great-light);
+}
+
+body.Okay {
+  background: linear-gradient($okay-dark, $okay-light);
+}
+
+body.Good {
+  background: linear-gradient($good-dark, $good-light);
+}
+
+body.Sad {
+  background: linear-gradient($sad-dark, $sad-light);
+} */
+
+/* nav {
+  margin-top: 0;
+  margin-bottom: 60px;
+  display: flex;
+  width: 100%;
+
+  background-color: $background-light-dark;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  list-style: none;
+  margin-right: 40px;
+  color: white;
+}
+
+nav li {
+  margin-left: 10px;
+  color: white;
+
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+  }
+}
+
+nav li ::after {
+  margin-left: 10px;
+  font-size: 18px;
+  color: black;
+}
+ */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 200px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+button {
+  display: inline-block;
+  margin-top: 40px;
+  border-width: 5px;
+  border-radius: 5px;
+  padding: 10px 40px;
+  width: 400px;
+  font-size: 40px;
+  background-color: $background-dark;
+  border-color: black;
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+.colorBtn.Depressed {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    $depressed-dark,
+    $depressed-light
+  );
+  color: linear-gradient(to right, $depressed-dark, $depressed-light);
+  background: -webkit-linear-gradient($depressed-dark, $depressed-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.colorBtn.Great {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, $great-dark, $great-light);
+  color: linear-gradient(to right, $great-dark, $great-light);
+  background: -webkit-linear-gradient($great-dark, $great-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.colorBtn.Okay {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, $okay-dark, $okay-light);
+  color: linear-gradient(to right, $okay-dark, $okay-light);
+  background: -webkit-linear-gradient($okay-dark, $okay-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.colorBtn.Good {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, $good-dark, $good-light);
+  color: linear-gradient(to right, $good-dark, $good-light);
+  background: -webkit-linear-gradient($good-dark, $good-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.colorBtn.Sad {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, $sad-dark, $sad-light);
+  color: linear-gradient(to right, $sad-dark, $sad-light);
+  background: $sad-light;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.popUp {
+  display: grid;
+  position: absolute;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+
+  background-color: grey;
+  width: 800px;
+  height: 600px;
+
+  padding: 40px;
+  border-radius: 7px;
+  grid-template-rows: 30px 1fr 70px;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 65px;
+
+  .editMood {
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 1/4;
+
+    //grid-template-columns: 1fr 70px 1fr;
+  }
+
+  textArea {
+    font-size: 20px;
+    /* grid-column: 2/3;
+    grid-row: 2/3; */
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  .popSVG {
+    justify-self: center;
+    width: 80%;
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+    /* display: flex;
+    justify-content: center; */
+  }
+
+  .delete-btn {
+    display: grid;
+
+    justify-self: end;
+
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    width: 20px;
+    padding: 3px 5px;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin-top: 0;
+  }
+
+  .confirmBTN {
+    display: grid;
+    background-color: white;
+    margin-top: 0;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    margin-bottom: 50px;
+    padding: 40px;
+  }
+
+  .descHeading {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-content: start;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .emotionHeading {
+    justify-self: center;
+    margin-bottom: 10px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .commentContainer {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .emotionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+.popUp-Container {
+  display: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.479);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+}

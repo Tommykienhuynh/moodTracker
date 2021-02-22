@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+h1 {
+  font-family: "Bangers", cursive;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 50%;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.moodHeading {
+  padding-top: 0px;
+  font-size: 22x;
+}
+
+.moodHeading.ghost {
+  opacity: 0.3;
+}

@@ -1,0 +1,194 @@
+@import "faces";
+@import "heading";
+@import "config";
+@import "hover";
+@import "nav";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-dark;
+  height: 1200px;
+}
+
+.container {
+  display: grid;
+  grid-row-gap: 60px;
+  grid-column-gap: 35px;
+  grid-template-rows: 300px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .weekChart {
+    display: none;
+    display: hidden;
+  }
+
+  .lineChart {
+    display: block;
+  }
+
+  .mainGraphCon {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    grid-row: 1/2;
+    grid-column: 1/4;
+
+    .graphContainer {
+      background-color: $background-light-dark;
+      width: 800px;
+      border-radius: 10px;
+
+      .chartSVG {
+        height: 35px;
+        width: 35px;
+      }
+      .averageChartSVG {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        transform: translateY(25%);
+        transform: translateX(-145%);
+        transform: translate(-145%, 55%);
+      }
+
+      .depressedChartSVG {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        transform: translate(-145%, 670%);
+      }
+
+      .sadChartSVG {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        transform: translate(-145%, 520%);
+      }
+      .okayChartSVG {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        transform: translate(-145%, 360%);
+      }
+      .goodChartSVG {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        transform: translate(-145%, 210%);
+      }
+
+      .viewContainer {
+        margin-top: 0;
+        height: 40px;
+        justify-content: space-around;
+        display: flex;
+        background-color: $background-dark-white;
+      }
+
+      span {
+        margin-top: 0;
+        height: 40px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        background-color: $background-dark-white;
+        align-items: center;
+      }
+
+      span.selected {
+        background-color: white;
+      }
+    }
+  }
+
+  .boxInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+    height: 375px;
+
+    background-color: $background-light-dark;
+    border-radius: 10px;
+
+    h1 {
+      margin-top: 4px;
+    }
+  }
+
+  .pie {
+    margin-left: 20px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .averageMood {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: $background-dark-white;
+    h1 {
+      color: $background-light-dark;
+    }
+
+    .averageMoodSvg {
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  .moodCounters {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+  .dataInfo {
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    width: 320px;
+    height: 240px;
+
+    .countCons {
+      h4 {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 40px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+
+      background-color: #a0a1a1;
+    }
+
+    .totalLogsCon {
+      grid-row: 1/2;
+      grid-template-columns: 1/2;
+    }
+    .currentStreakCon {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+    .greatCon {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+    .highestCon {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+  }
+}

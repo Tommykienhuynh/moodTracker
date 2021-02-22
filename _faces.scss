@@ -1,0 +1,74 @@
+.mood {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  //background-color: red;
+}
+.unactiveFace {
+  display: none;
+  opacity: 0.3;
+}
+
+.activeFace {
+  display: block;
+}
+
+svg {
+  /* transform: translateX(-10px);
+    transform: translateY(-20px); */
+  transform: translate(-40px, -30px);
+
+  height: 80%;
+  width: 80%;
+}
+
+.okay {
+  &:hover {
+    #leaf {
+      animation: leaf 4s infinite linear;
+      transform-origin: center;
+    }
+
+    #eyeLeft,
+    #eyeRight {
+      animation: eyes 3s ease-in-out infinite;
+    }
+
+    @keyframes eyes {
+      from {
+        transform: rotateX(0deg);
+      }
+      to {
+        transform: rotateX(20deg);
+      }
+    }
+
+    @keyframes leaf {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.mood.grow {
+  animation: grow 7s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1.000005);
+  }
+}

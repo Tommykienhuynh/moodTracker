@@ -1,0 +1,110 @@
+@import "config";
+@import "nav";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  //background: linear-gradient(0.25turn, #2c3e50, #000000);
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  height: 100%;
+
+  width: 99vw;
+  //background: url("img/rhendi-rukmana-H0lTOg1t_0o-unsplash.jpg") no-repeat
+  //center center/ cover;
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+/* .allLogs {
+  width: 75vw;
+} */
+
+.container {
+  display: grid;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  grid-template-columns: 200px 1fr 1fr 1fr;
+  grid-template-rows: 140px 30px;
+  row-gap: 10px;
+  column-gap: 10px;
+  /* padding-left: 220px;
+  padding-right: 220px; */
+
+  .faceImage-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #373c3f;
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    svg {
+      width: 60%;
+      margin-right: 10px;
+    }
+  }
+  .moodName-Container.Great {
+    color: $primary-green;
+  }
+  .moodName-Container.Good {
+    color: $primary-blue;
+  }
+
+  .moodName-Container.Okay {
+    color: $primary-orange;
+  }
+
+  .moodName-Container.Sad {
+    color: $primary-violet;
+  }
+
+  .moodName-Container.Depressed {
+    color: $primary-pink;
+  }
+
+  .moodName-Container {
+    //color: #ee8932;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #373c3f;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .logs-Container {
+    background-color: #373c3f;
+    grid-row: 1/3;
+    grid-column: 2/5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 800px;
+
+    h3 {
+      margin-bottom: 2px;
+    }
+    span {
+      margin-top: 0;
+      padding-top: 0;
+      font-size: 100%;
+    }
+
+    h2 {
+      font-size: 100%;
+      margin-bottom: 0px;
+    }
+
+    p {
+      margin-top: 35px;
+      font-size: 100%;
+    }
+  }
+}

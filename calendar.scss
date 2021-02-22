@@ -1,0 +1,12 @@
+@import "config";
+@import "nav";
+
+body {
+  background-color: $background-dark;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
